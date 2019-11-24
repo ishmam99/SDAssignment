@@ -74,9 +74,10 @@
                         dataType:'json',
                          success: function(res){
                             var data= res.data;
+                            var x=0;
                             for(var i=0; i<data.length;i++){
-                                var x= '<option value="'+data[i].id+'">'+data[i].name+'</option>';
-                                $("#district").append(x);
+                                 x+= '<option value="'+data[i].id+'">'+data[i].name+'</option>';
+                                $("#district").html(x);
                             }
                         }
                   });
